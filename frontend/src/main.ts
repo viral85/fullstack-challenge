@@ -1,0 +1,17 @@
+import { createApp, ref } from "vue";
+import { createPinia } from "pinia";
+import { BootstrapVueNext, BToastPlugin } from "bootstrap-vue-next";
+import App from "./App.vue";
+import router from "./router";
+import "bootstrap/js/dist/modal";
+import "./assets/main.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue-next/dist/bootstrap-vue-next.css";
+// createApp(App).use(router).use(BootstrapVueNext).use(createPinia()).use(BToastPlugin).mount("#app");
+const app = createApp(App);
+app.use(router);
+app.use(BootstrapVueNext);
+app.use(BootstrapVueNext);
+app.use(createPinia());
+app.use(BToastPlugin);
+app.mount("#app");
